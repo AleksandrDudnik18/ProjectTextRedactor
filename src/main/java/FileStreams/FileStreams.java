@@ -6,9 +6,9 @@ import java.awt.event.*;
 import java.util.*;
 
 public class FileStreams {
+
     public static void main(String args[]) {
-        FrameWindow frame;
-        frame = new FrameWindow("Simplest Java Notepad");
+        FrameWindow frame = new FrameWindow("Simplest Java Notepad");
         frame.setVisible(true);
     }
 }
