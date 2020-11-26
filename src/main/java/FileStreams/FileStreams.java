@@ -145,7 +145,7 @@ class FrameWindow extends Frame
 
         try {
             is = new FileInputStream(szCurrentFilename);
-        } catch (FileNotFoundException | SecurityException ex) {
+        } catch (FileNotFoundException ex) {
             System.out.println(ex.toString());
         }
 
@@ -165,7 +165,8 @@ class FrameWindow extends Frame
         st = new StringTokenizer(szStr, "\r\n");
 
         while (st.hasMoreElements()) {
-            szStr = (String) st.nextElement();
+//          szStr = (String) st.nextElement();
+            szStr = st.nextToken();
             ta.append(szStr + "\r\n");
         }
 
@@ -210,7 +211,7 @@ class FrameWindow extends Frame
             os.write(buf);
             os.close();
 
-        } catch (IOException | SecurityException ex) {
+        } catch (IOException ex) {
             System.out.println(ex.toString());
         }
     }
