@@ -200,7 +200,7 @@ class FrameWindow extends Frame
     // FileSave
     // ============================================
     void FileSave() {
-        FileOutputStream os = null;
+        FileOutputStream os;
 
         String sz = ta.getText();
         buf = sz.getBytes();
