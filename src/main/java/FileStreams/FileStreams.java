@@ -145,7 +145,7 @@ class FrameWindow extends Frame
 
         try {
             is = new FileInputStream(szCurrentFilename);
-        } catch (FileNotFoundException ex) {
+        } catch (FileNotFoundException | SecurityException ex) {
             System.out.println(ex.toString());
         }
 
@@ -211,7 +211,7 @@ class FrameWindow extends Frame
             os.write(buf);
             os.close();
 
-        } catch (IOException ex) {
+        } catch (IOException | SecurityException ex) {
             System.out.println(ex.toString());
         }
     }
